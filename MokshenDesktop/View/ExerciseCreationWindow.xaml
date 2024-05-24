@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="MokshenDesktop.View.ExerciseCreationWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:local="clr-namespace:MokshenDesktop.View" xmlns:converter="clr-namespace:MokshenDesktop.Resources.Services"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1200">
+    <UserControl.Resources>
+        <converter:BoolToStringConverter x:Key="BoolToStringConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="Создание и редактирование задания" FontSize="32" HorizontalAlignment="Center"/>
+            <Button Content="{Binding IsEditingMode,
+                    Converter={StaticResource BoolToStringConverter},
+                    ConverterParameter='Режим редактирования|Режим создания'}"
+                    HorizontalAlignment="Center"
+                    Command="{Binding ToggleModeCommand}">
+            </Button>
+            <StackPanel>
+                <Label Content="Категория задания"/>
+                <TextBox Text="{Binding CategoryForCreation, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Content="Правильный ответ"/>
+                <TextBox Text="{Binding TrueAnswerForCreation, UpdateSourceTrigger=PropertyChanged}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="+"
+                            Command="{Binding AddRowCommand}"
+                            Width="24"/>
+                    <ComboBox ItemsSource="{Binding AnswersForCreation, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <Button Content="-"
+                                            Width="24"
+                                            Command="{Binding DataContext.RemoveRowCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                                            CommandParameter="{Binding}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
+                <Button Command="{Binding CreateOrEditExerciseCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Content" Value="Создать задание"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsEditingMode}" Value="True">
+                                    <Setter Property="Content" Value="Редактировать задание"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="Удалить выбранное задание"
+                    Command="{Binding DeleteSelectedExerciseCommand}"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Просмотр заданий" FontSize="32" HorizontalAlignment="Center"/>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible">
+                <ListView ItemsSource="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Label Content="{Binding Id}"/>
+                                <Label Content="{Binding Category}"/>
+                                <Label Content="{Binding TrueAnswer}"/>
+                                <ComboBox ItemsSource="{Binding Answers}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding Content}"/>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</UserControl>

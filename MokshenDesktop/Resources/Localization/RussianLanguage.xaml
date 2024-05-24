@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:clr="clr-namespace:System;assembly=mscorlib">
+    <clr:String x:Key="LoginLabelText">Логин</clr:String>
+    <clr:String x:Key="PasswordLabelText">Пароль</clr:String>
+    <clr:String x:Key="PasswordConfirmLabelText">Пароль еще раз</clr:String> 
+    <clr:String x:Key="EmailLabelText">Почта</clr:String> 
+    <clr:String x:Key="LoginButtonText">Войти</clr:String>
+    <clr:String x:Key="RegisterButtonText">Зарегистрироваться</clr:String>
+    <clr:String x:Key="GoBackButtonText">Вернуться</clr:String>
+    <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/mokshen.png"></BitmapImage>
+</ResourceDictionary>

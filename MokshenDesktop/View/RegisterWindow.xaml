@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="MokshenDesktop.View.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MokshenDesktop.View"
+        mc:Ignorable="d"
+        Height="900" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical"
+                Grid.Column="1"
+                VerticalAlignment="Center">
+            <Label Content="{DynamicResource LoginLabelText}"/>
+            <TextBox Text="{Binding RUsername}"/>
+            <Label Content="{DynamicResource EmailLabelText}"/>
+            <TextBox Text="{Binding Email}"/>
+            <Label Content="{DynamicResource PasswordLabelText}"/>
+            <TextBox Text="{Binding RPassword}"/>
+            <Label Content="{DynamicResource PasswordConfirmLabelText}"/>
+            <TextBox Text="{Binding PasswordConfirm}"/>
+            <Button Content="{DynamicResource RegisterButtonText}"
+            Command="{Binding NavigateFinishRegisterCommand}"/>
+            <Button Content="{DynamicResource GoBackButtonText}"
+            Command="{Binding NavigateLoginCommand}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Button Grid.Column="2"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Command="{Binding SwitchLanguageCommand}"
+                Background="White">
+                <Image Source="{DynamicResource LanguagePng}"
+                   Width="64"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
