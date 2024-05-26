@@ -15,6 +15,7 @@ using System.Windows;
 using CommunityToolkit.Mvvm.Input;
 using System.ComponentModel;
 using System.Windows.Controls;
+using MokshenDesktop.Resources.Commands;
 
 namespace MokshenDesktop.ViewModel.ThemesViewModel
 {
@@ -27,6 +28,7 @@ namespace MokshenDesktop.ViewModel.ThemesViewModel
             _store = store;
             NavigateFinishExerciseCommand = new RelayCommand(() => NavigateFinishExercise(_store));
             GetExercisesAsync().ContinueWith(t => t, TaskScheduler.FromCurrentSynchronizationContext());
+            GoBackCommand = new NavigateCommand<ThemeViewModel>(store, () => new ThemeViewModel(store));
         }
     }
 

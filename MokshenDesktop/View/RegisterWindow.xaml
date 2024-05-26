@@ -6,37 +6,40 @@
         xmlns:local="clr-namespace:MokshenDesktop.View"
         mc:Ignorable="d"
         Height="900" Width="1200">
-    <Grid>
+    <Grid Background="{DynamicResource Background}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical"
-                Grid.Column="1"
-                VerticalAlignment="Center">
-            <Label Content="{DynamicResource LoginLabelText}"/>
-            <TextBox Text="{Binding RUsername}"/>
-            <Label Content="{DynamicResource EmailLabelText}"/>
-            <TextBox Text="{Binding Email}"/>
-            <Label Content="{DynamicResource PasswordLabelText}"/>
-            <TextBox Text="{Binding RPassword}"/>
-            <Label Content="{DynamicResource PasswordConfirmLabelText}"/>
-            <TextBox Text="{Binding PasswordConfirm}"/>
+                    Grid.Column="1"
+                    VerticalAlignment="Top">
+            <Label Content="{DynamicResource WelcomeRegisterLabelText}"
+                       Style="{StaticResource BigLabelStyle}"
+                       Margin="0 10 0 100"/>
+            <Label Content="{DynamicResource LoginLabelText}"
+                   Style="{StaticResource BaseLabelStyle}"/>
+            <TextBox Text="{Binding RUsername}"
+                     Style="{StaticResource BaseTextBoxStyle}"/>
+            <Label Content="{DynamicResource EmailLabelText}"
+                   Style="{StaticResource BaseLabelStyle}"/>
+            <TextBox Text="{Binding Email}"
+                     Style="{StaticResource BaseTextBoxStyle}"/>
+            <Label Content="{DynamicResource PasswordLabelText}"
+                   Style="{StaticResource BaseLabelStyle}"/>
+            <TextBox Text="{Binding RPassword}"
+                     Style="{StaticResource BaseTextBoxStyle}"/>
+            <Label Content="{DynamicResource PasswordConfirmLabelText}"
+                   Style="{StaticResource BaseLabelStyle}"/>
+            <TextBox Text="{Binding PasswordConfirm}"
+                     Style="{StaticResource BaseTextBoxStyle}"/>
             <Button Content="{DynamicResource RegisterButtonText}"
-            Command="{Binding NavigateFinishRegisterCommand}"/>
+                    Command="{Binding NavigateFinishRegisterCommand}"
+                    Style="{StaticResource BaseButtonStyle}"/>
             <Button Content="{DynamicResource GoBackButtonText}"
-            Command="{Binding NavigateLoginCommand}"/>
-        </StackPanel>
-        <StackPanel Grid.Column="2">
-            <Button Grid.Column="2"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Command="{Binding SwitchLanguageCommand}"
-                Background="White">
-                <Image Source="{DynamicResource LanguagePng}"
-                   Width="64"/>
-            </Button>
+                    Command="{Binding NavigateLoginCommand}"
+                    Style="{StaticResource BaseButtonStyle}"/>
         </StackPanel>
     </Grid>
 </UserControl>

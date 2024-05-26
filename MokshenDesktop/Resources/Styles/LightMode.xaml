@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ImageSource x:Key="ThemesBackground">/Resources/Images/themesbackground.png</ImageSource>
+    <SolidColorBrush x:Key="Background">#eee3da</SolidColorBrush>
+    <SolidColorBrush x:Key="AccentColor">#AC3146</SolidColorBrush>
+    <SolidColorBrush x:Key="SecondaryAccentColor">#7e323f</SolidColorBrush>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles/LightMode/Buttons.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/LightMode/Labels.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/LightMode/TextBoxes.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/LightMode/ComboBoxes.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/LightMode/ListView.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/LightMode/StackPanels.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

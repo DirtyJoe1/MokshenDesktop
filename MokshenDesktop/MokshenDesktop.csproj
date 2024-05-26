@@ -9,10 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Images\icon.jpg" />
+    <None Remove="Resources\Fonts\FiraSansCondensed.ttf" />
+    <None Remove="Resources\Images\arrowleft.png" />
+    <None Remove="Resources\Images\arrowright.png" />
+    <None Remove="Resources\Images\checkmark.png" />
+    <None Remove="Resources\Images\exit.png" />
+    <None Remove="Resources\Images\icon.png" />
     <None Remove="Resources\Images\mokshen.png" />
     <None Remove="Resources\Images\Root.png" />
     <None Remove="Resources\Images\russian.png" />
+    <None Remove="Resources\Images\themesbackground.png" />
+    <None Remove="Resources\Images\Themes\Adjective.png" />
+    <None Remove="Resources\Images\Themes\Antonyms.png" />
+    <None Remove="Resources\Images\Themes\Cases.png" />
+    <None Remove="Resources\Images\Themes\Numeral.png" />
+    <None Remove="Resources\Images\Themes\Root.png" />
+    <None Remove="Resources\Images\Themes\Sentence.png" />
+    <None Remove="Resources\Images\Themes\Suffix.png" />
+    <None Remove="Resources\Images\Themes\Tenses.png" />
+    <None Remove="Resources\Images\Themes\Verb.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,16 +39,58 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Images\icon.jpg">
+    <EmbeddedResource Include="Resources\Fonts\FiraSansCondensed.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="Resources\Images\arrowleft.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\arrowright.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\checkmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\mokshen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Images\Root.png">
+    <Resource Include="Resources\Images\themesbackground.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Adjective.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Antonyms.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Cases.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\russian.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Numeral.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Root.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Sentence.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Suffix.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Tenses.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -51,6 +108,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Styles\DarkMode\" />
   </ItemGroup>
 
 </Project>

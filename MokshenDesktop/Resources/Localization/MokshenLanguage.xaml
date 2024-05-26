@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:clr="clr-namespace:System;assembly=mscorlib">
+    <clr:String x:Key="WelcomeLoginLabelText">Сувама васта</clr:String>
+    <clr:String x:Key="WelcomeRegisterLabelText">Регистрациясь</clr:String>
     <clr:String x:Key="LoginLabelText">Логинце</clr:String>
     <clr:String x:Key="PasswordLabelText">Парольце</clr:String>
     <clr:String x:Key="PasswordConfirmLabelText">Парольцень тага весть</clr:String>
@@ -8,5 +10,21 @@
     <clr:String x:Key="LoginButtonText">Сувамс</clr:String>
     <clr:String x:Key="RegisterButtonText">Тиемс регистрациять</clr:String>
     <clr:String x:Key="GoBackButtonText">Меки</clr:String>
+    <clr:String x:Key="WelcomeThemesLabelText">Шумбрат,</clr:String>
+    <clr:String x:Key="SelectThemeLabelText">Выбрак темать</clr:String>
+    <clr:String x:Key="DoExerciseLabelText">Тик заданиять</clr:String>
+    <clr:String x:Key="GetMarkLabelText">Получак оценкать</clr:String>
+    <clr:String x:Key="BestWishesLabelText">Лацкас тонафнек!</clr:String>
+
+    <clr:String x:Key="CasesLabelText">Падежт</clr:String>
+    <clr:String x:Key="TensesLabelText">Пингтне</clr:String>
+    <clr:String x:Key="NumeralLabelText">Числительнай</clr:String>
+    <clr:String x:Key="RootLabelText">Валъюр</clr:String>
+    <clr:String x:Key="SentenceLabelText">Валрисьме</clr:String>
+    <clr:String x:Key="SuffixLabelText">Валмельгакс</clr:String>
+    <clr:String x:Key="AdjectiveLabelText">Прилагательнай</clr:String>
+    <clr:String x:Key="VerbLabelText">Глаголсь</clr:String>
+    <clr:String x:Key="AntonymsLabelText">Антонимт</clr:String>
+
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/russian.png"></BitmapImage>
 </ResourceDictionary>

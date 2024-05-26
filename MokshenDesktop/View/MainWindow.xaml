@@ -8,25 +8,46 @@
         xmlns:views="clr-namespace:MokshenDesktop.View"
         xmlns:themesviewmodels="clr-namespace:MokshenDesktop.ViewModel.ThemesViewModel"
         xmlns:themesviews="clr-namespace:MokshenDesktop.View.ThemesView"
-        Icon="\Resources\Images\icon.jpg"
-        Title="Мокшень Десктоп" Height="900" Width="1200">
-    <ContentControl Content="{Binding CurrentViewModel}">
-        <ContentControl.Resources>
-            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
-                <views:LoginWindow/>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
-                <views:RegisterWindow/>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type viewmodels:ThemeViewModel}">
-                <views:ThemeWindow/>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type viewmodels:ExerciseCreationViewModel}">
-                <views:ExerciseCreationWindow/>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type themesviewmodels:RootViewModel}">
-                <themesviews:RootWindow/>
-            </DataTemplate>
-        </ContentControl.Resources>
-    </ContentControl>
+        Icon="\Resources\Images\Icon.png"
+        Title="Мокшень Десктоп" Height="900" Width="1200"
+        ResizeMode="CanMinimize">
+    <Grid DataContext="{Binding}" Background="{DynamicResource Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{DynamicResource Background}">
+            <Button Style="{StaticResource BaseButtonStyle}"
+                    Width="60" Height="60"
+                    HorizontalAlignment="Left"
+                    Command="{Binding ExitCommand}"
+                    Content="{StaticResource ExitImage}"/>
+            <Button Style="{StaticResource NoBorderTransparentButton}"
+                    Command="{Binding SwitchLanguageCommand}"
+                    Width="60"
+                    Height="60"
+                    HorizontalAlignment="Right">
+                <Image Source="{DynamicResource LanguagePng}"/>
+            </Button>
+        </Grid>
+            <ContentControl Content="{Binding CurrentViewModel}" Grid.Row="1">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+                    <views:LoginWindow/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
+                    <views:RegisterWindow/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ThemeViewModel}">
+                    <views:ThemeWindow/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ExerciseCreationViewModel}">
+                    <views:ExerciseCreationWindow/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type themesviewmodels:RootViewModel}">
+                    <themesviews:RootWindow/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+    </Grid>
 </Window>

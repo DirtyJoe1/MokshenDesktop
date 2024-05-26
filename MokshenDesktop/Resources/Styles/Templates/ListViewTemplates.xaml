@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataTemplate x:Key="ExerciseCreationListViewTemplate">
+        <StackPanel Style="{DynamicResource BaseStackPanelStyle}">
+            <Label Content="{Binding Id}"
+                   Style="{DynamicResource ComboBoxLabelStyle}"/>
+            <Label Content="{Binding Category}"
+                   Style="{DynamicResource ComboBoxLabelStyle}"/>
+            <Label Content="{Binding TrueAnswer}"
+                   Style="{DynamicResource ComboBoxLabelStyle}"/>
+            <ComboBox ItemsSource="{Binding Answers}"
+                      ItemTemplate="{DynamicResource ExerciseCreationRightComboBoxTemplate}"
+                      Style="{DynamicResource BaseComboBoxStyle}"/>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

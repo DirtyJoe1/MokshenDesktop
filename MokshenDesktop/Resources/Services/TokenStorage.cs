@@ -10,5 +10,6 @@ namespace MokshenDesktop.Resources.Services
     {
         public static string Token {  get; set; }
         public static string Role {  get; set; }
+        public static string Username {  get; set; }
     }
 }

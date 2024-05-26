@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using MokshenDesktop.Model;
+using MokshenDesktop.Resources.Commands;
 using MokshenDesktop.Resources.Services;
 using System;
 using System.Collections.Generic;
@@ -87,6 +88,7 @@ namespace MokshenDesktop.ViewModel
             GetExercisesAsync().ContinueWith(t => t, TaskScheduler.FromCurrentSynchronizationContext());
             DeleteSelectedExerciseCommand = new RelayCommand(() => DelExercise(SelectedExercise));
             CreateOrEditExerciseCommand = new RelayCommand(CreateOrEditExercise);
+            GoBackCommand = new NavigateCommand<LoginViewModel>(store, () => new LoginViewModel(store));
             AddRowCommand = new RelayCommand(() =>
             {
                 AnswersForCreation.Add(new Answer { Content = "Введите содержимое ответа" });

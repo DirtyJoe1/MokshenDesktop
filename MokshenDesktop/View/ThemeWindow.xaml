@@ -6,13 +6,160 @@
              xmlns:local="clr-namespace:MokshenDesktop.View"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1200">
-    <UserControl.Resources>
-        <Image x:Key="ThemeImage" Source="/Resources/Images/Root.png"/>
-    </UserControl.Resources>
-    <Grid>
-        <Button Width="120" Height="120"
-                Content="{StaticResource ThemeImage}"
-                Command="{Binding NavigateRootCommand}">
-        </Button>
-    </Grid>
+    <Grid Background="{DynamicResource Background}">
+        <!--<Grid.Background >
+            --><!--<ImageBrush ImageSource="{DynamicResource ThemesBackground}">
+            </ImageBrush>--><!--
+        </Grid.Background>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top"
+                    Margin="50">
+            <Label Content="{DynamicResource WelcomeThemesLabelText}"
+                   Style="{StaticResource BigLabelStyle}"/>
+            <Label Content="{Binding Username}"
+                   Style="{StaticResource BigLabelStyle}"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center"
+                    Margin="50 25">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource CheckMarkButtonStyle}"/>
+                    <Label Content="{DynamicResource SelectThemeLabelText}"
+                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
+                    <Label Content="{DynamicResource DoExerciseLabelText}"
+                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
+                    <Label Content="{DynamicResource GetMarkLabelText}"
+                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
+                    <Label Content="{DynamicResource BestWishesLabelText}"
+                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Margin="50">
+            <Button Style="{StaticResource BaseButtonStyle}"
+                    Width="120" Height="60"
+                    Command="{Binding GoBackCommand}"
+                    HorizontalAlignment="Center"
+                    Margin="20"
+                    Content="{DynamicResource GoBackButtonText}"/>
+        </StackPanel>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Column="0" Grid.Row="0" 
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource CasesThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource CasesLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Grid.Row="0"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource TensesThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource TensesLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="2" Grid.Row="0"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource NumeralThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource NumeralLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="0" Grid.Row="1"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource RootThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource RootLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Grid.Row="1"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource SentenceThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource SentenceLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="1"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource SuffixThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource SuffixLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="0" Grid.Row="2"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource AdjectiveThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource AdjectiveLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1" Grid.Row="2"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource VerbThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource VerbLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="2"
+                        Style="{StaticResource ThemesStackPanelStyle}">
+                <Button Width="120" Height="120" 
+                    Content="{StaticResource AntonymsThemeImage}"
+                    Style="{StaticResource ThemesButtonStyle}"
+                    Command="{Binding NavigateRootCommand}"/>
+                <Label Content="{DynamicResource AntonymsLabelText}"
+                       Style="{StaticResource ThemesLabelStyle}"/>
+            </StackPanel>
+            
+        </Grid>
+        </Grid>
 </UserControl>

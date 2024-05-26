@@ -16,6 +16,7 @@ namespace MokshenDesktop.ViewModel
     {
         public Store _store;
         private bool _isCurrentLanguageIsRussian = false;
+        public ICommand GoBackCommand { get; set; }
         public bool IsCurrentLanguageIsRussian
         {
             get => _isCurrentLanguageIsRussian;

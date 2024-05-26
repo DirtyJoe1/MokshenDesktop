@@ -40,13 +40,11 @@ namespace MokshenDesktop.ViewModel
         }
         public ICommand NavigateRegisterCommand { get; }
         public ICommand NavigateThemesCommand { get; }
-        public ICommand SwitchLanguageCommand {  get; }
         public LoginViewModel(Store store) 
         {
             _store = store;
             NavigateRegisterCommand = new NavigateCommand<RegisterViewModel>(store, () => new RegisterViewModel(store));
             NavigateThemesCommand = new RelayCommand(() => NavigateThemes(_store));
-            SwitchLanguageCommand = new RelayCommand(SwitchLanguage);
         }
         public async void NavigateThemes(Store store)
         {
@@ -58,6 +56,7 @@ namespace MokshenDesktop.ViewModel
             HttpResponseMessage response = await store.Repository.PostAuthenticationLogin(login);
             if (response.IsSuccessStatusCode)  
             {
+                TokenStorage.Username = login.Username;
                 if (TokenStorage.Role == "Admin")
                 {
                     store.CurrentViewModel = new ExerciseCreationViewModel(store);

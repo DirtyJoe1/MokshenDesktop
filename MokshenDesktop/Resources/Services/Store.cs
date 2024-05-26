@@ -1,4 +1,5 @@
-﻿using MokshenDesktop.ViewModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MokshenDesktop.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MokshenDesktop.Resources.Services
 {
-    public class Store
+    public class Store : ObservableObject
     {
         public Repository Repository = new();
         public event Action CurrentViewModelChanged;

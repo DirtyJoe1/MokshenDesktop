@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Image x:Key="Icon" Source="/Resources/Images/Icon.png"/>
+    <Image x:Key="ArrowLeftImage" Source="/Resources/Images/arrowleft.png"/>
+    <Image x:Key="ExitImage" Source="/Resources/Images/exit.png"/>
+    <Image x:Key="CasesThemeImage" Source="/Resources/Images/Themes/Cases.png"/>
+    <Image x:Key="TensesThemeImage" Source="/Resources/Images/Themes/Tenses.png"/>
+    <Image x:Key="NumeralThemeImage" Source="/Resources/Images/Themes/Numeral.png"/>
+    <Image x:Key="RootThemeImage" Source="/Resources/Images/Themes/Root.png"/>
+    <Image x:Key="SentenceThemeImage" Source="/Resources/Images/Themes/Sentence.png"/>
+    <Image x:Key="SuffixThemeImage" Source="/Resources/Images/Themes/Suffix.png"/>
+    <Image x:Key="AdjectiveThemeImage" Source="/Resources/Images/Themes/Adjective.png"/>
+    <Image x:Key="VerbThemeImage" Source="/Resources/Images/Themes/Verb.png"/>
+    <Image x:Key="AntonymsThemeImage" Source="/Resources/Images/Themes/Antonyms.png"/>
+    <Image x:Key="CheckMarkImage" Source="/Resources/Images/checkmark.png"/>
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles/Templates/ComboBoxesTemplates.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Templates/ListViewTemplates.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

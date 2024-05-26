@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MokshenDesktop.View.ThemesView"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1200">
-    <Grid>
+    <Grid Background="{DynamicResource Background}">
         <StackPanel>
             <ItemsControl ItemsSource="{Binding Exercises}">
                 <ItemsControl.ItemTemplate>
@@ -28,7 +28,13 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
             <Button Content="Закончить задание"
+                    Style="{StaticResource BaseButtonStyle}"
                     Command="{Binding NavigateFinishExerciseCommand}"/>
+            <Button Style="{StaticResource BaseButtonStyle}"
+                    Command="{Binding GoBackCommand}"
+                    Content="{StaticResource ArrowLeftImage}"
+                    HorizontalAlignment="Left"
+                    Width="60" Height="60"/>
         </StackPanel>
     </Grid>
 </UserControl>
