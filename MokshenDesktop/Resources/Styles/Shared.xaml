@@ -17,5 +17,17 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Styles/Templates/ComboBoxesTemplates.xaml"/>
         <ResourceDictionary Source="/Resources/Styles/Templates/ListViewTemplates.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Templates/ItemControlTemplates.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Templates/ContentControlTemplates.xaml"/>
+
+        <ResourceDictionary Source="/Resources/Styles/Elements/Buttons.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/Labels.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/TextBoxes.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/ComboBoxes.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/ListView.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/StackPanels.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/ListBoxes.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/RadioButtons.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/TextBlocks.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

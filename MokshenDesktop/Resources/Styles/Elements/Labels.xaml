@@ -3,6 +3,7 @@
     <Style x:Key="BaseLabelStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="Fira Sans Condensed"/>
         <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
         <Style.Triggers>
             <EventTrigger RoutedEvent="Loaded">
                 <BeginStoryboard>

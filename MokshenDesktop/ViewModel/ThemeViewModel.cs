@@ -24,11 +24,13 @@ namespace MokshenDesktop.ViewModel
             }
         }
         public ICommand NavigateRootCommand { get; }
+        public ICommand NavigateCasesCommand { get; }
         public ThemeViewModel(Store store)
         {
             _store = store;
             Username = TokenStorage.Username;
             NavigateRootCommand = new NavigateCommand<RootViewModel>(store, () => new RootViewModel(store));
+            NavigateCasesCommand = new NavigateCommand<CasesViewModel>(store, () => new CasesViewModel(store));
             GoBackCommand = new NavigateCommand<LoginViewModel>(store, () => new LoginViewModel(store));
         }
     }

@@ -7,34 +7,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1200">
     <Grid Background="{DynamicResource Background}">
-        <StackPanel>
-            <ItemsControl ItemsSource="{Binding Exercises}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <ItemsControl ItemsSource="{Binding Answers}">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <RadioButton FontSize="20"
-                                                 Content="{Binding Content}"
-                                                 GroupName="{Binding DataContext.GroupIndex, RelativeSource={RelativeSource FindAncestor, AncestorType=ItemsControl, AncestorLevel=1}}"
-                                                 IsChecked="{Binding IsSelected}"
-                                                 Command="{Binding DataContext.SelectAnswerCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                                 CommandParameter="{Binding}">
-                                    </RadioButton>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-            <Button Content="Закончить задание"
-                    Style="{StaticResource BaseButtonStyle}"
-                    Command="{Binding NavigateFinishExerciseCommand}"/>
-            <Button Style="{StaticResource BaseButtonStyle}"
-                    Command="{Binding GoBackCommand}"
-                    Content="{StaticResource ArrowLeftImage}"
-                    HorizontalAlignment="Left"
-                    Width="60" Height="60"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <ContentControl Style="{DynamicResource HelpTextBlock}"
+                            Content="{DynamicResource RootExerciseHelpTextBlock}"/>
         </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ItemsControl ItemsSource="{Binding Exercises}"
+                          ItemTemplate="{StaticResource RootExerciseItemsControlTemplate}">
+            </ItemsControl>
+            <StackPanel>
+            <Button Content="{DynamicResource FinishExerciseLabelText}"
+                    Style="{DynamicResource BaseButtonStyle}"
+                    Command="{Binding NavigateFinishExerciseCommand}"
+                    HorizontalAlignment="Left"
+                    Width="200"/>
+            <Button Style="{DynamicResource BaseButtonStyle}"
+                    Command="{Binding GoBackCommand}"
+                    Content="{DynamicResource GoBackButtonText}"
+                    HorizontalAlignment="Left"
+                    Width="200"/>
+                </StackPanel>
+            </StackPanel>
     </Grid>
 </UserControl>

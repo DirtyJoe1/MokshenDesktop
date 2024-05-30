@@ -10,17 +10,16 @@
                     HorizontalAlignment="Left"
                     Margin="0, 0, 5, 0"/>
             <TextBox Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}"
-                     Style="{DynamicResource ComboBoxTextBoxStyle}"
+                     Style="{DynamicResource BaseTextBoxStyle}"
                      VerticalContentAlignment="Center"
                      Width="150"
                      HorizontalAlignment="Right"/>
         </StackPanel>
     </DataTemplate>
     <DataTemplate x:Key="ExerciseCreationRightComboBoxTemplate">
-        <Label Content="{Binding Content}"
-               Style="{DynamicResource ComboBoxLabelStyle}"
-               Background="#AC3146"
-               Width="200"
-               HorizontalAlignment="Stretch"/>
+        <ListBoxItem Content="{Binding Content}"
+                      FontFamily="Fira Sans Condensed"
+                      FontSize="16"
+                      Style="{StaticResource MaterialDesignListBoxItem}"/>
     </DataTemplate>
 </ResourceDictionary>

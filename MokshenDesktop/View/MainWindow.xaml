@@ -17,17 +17,25 @@
             <RowDefinition Height="11*"/>
         </Grid.RowDefinitions>
         <Grid Background="{DynamicResource Background}">
-            <Button Style="{StaticResource BaseButtonStyle}"
+            <Button Style="{DynamicResource BaseButtonStyle}"
                     Width="60" Height="60"
                     HorizontalAlignment="Left"
                     Command="{Binding ExitCommand}"
                     Content="{StaticResource ExitImage}"/>
-            <Button Style="{StaticResource NoBorderTransparentButton}"
+            <Button Style="{DynamicResource NoBorderTransparentButton}"
                     Command="{Binding SwitchLanguageCommand}"
                     Width="60"
                     Height="60"
                     HorizontalAlignment="Right">
                 <Image Source="{DynamicResource LanguagePng}"/>
+            </Button>
+            <Button Style="{DynamicResource NoBorderTransparentButton}"
+                    Command="{Binding SwitchThemeCommand}"
+                    Width="60"
+                    Height="60"
+                    HorizontalAlignment="Right"
+                    Margin="10 10 90 0">
+                <Image Source="{DynamicResource ModeImage}"/>
             </Button>
         </Grid>
             <ContentControl Content="{Binding CurrentViewModel}" Grid.Row="1">
@@ -46,6 +54,9 @@
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type themesviewmodels:RootViewModel}">
                     <themesviews:RootWindow/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type themesviewmodels:CasesViewModel}">
+                    <themesviews:CasesWindow/>
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>

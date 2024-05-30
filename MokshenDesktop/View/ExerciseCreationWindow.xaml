@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              xmlns:local="clr-namespace:MokshenDesktop.View" xmlns:converter="clr-namespace:MokshenDesktop.Resources.Services"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1200">
@@ -17,50 +16,50 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" HorizontalAlignment="Stretch">
             <Label Content="Создание и редактирование задания"
-                   Style="{StaticResource BigLabelStyle}" />
+                   Style="{DynamicResource BigLabelStyle}" />
             <Button Content="{Binding IsEditingMode,
                     Converter={StaticResource BoolToStringConverter},
                     ConverterParameter='Режим редактирования|Режим создания'}"
                     HorizontalAlignment="Center"
                     Command="{Binding ToggleModeCommand}"
-                    Style="{StaticResource BaseButtonStyle}">
+                    Style="{DynamicResource BaseButtonStyle}">
             </Button>
             <StackPanel>
-                <Label Content="Категория задания"
-                       Style="{StaticResource BaseLabelStyle}"/>
+                    <Label Content="Категория задания"
+                           Style="{DynamicResource BaseLabelStyle}"/>
                 <TextBox Text="{Binding CategoryForCreation, UpdateSourceTrigger=PropertyChanged}"
-                         Style="{StaticResource BaseTextBoxStyle}"/>
+                         Style="{DynamicResource BaseTextBoxStyle}"/>
                 <Label Content="Правильный ответ"
-                       Style="{StaticResource BaseLabelStyle}"/>
+                       Style="{DynamicResource BaseLabelStyle}"/>
                 <TextBox Text="{Binding TrueAnswerForCreation, UpdateSourceTrigger=PropertyChanged}"
-                         Style="{StaticResource BaseTextBoxStyle}"/>
+                         Style="{DynamicResource BaseTextBoxStyle}"/>
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Stretch">
                     <Button Content="+"
                             Command="{Binding AddRowCommand}"
                             Width="32"
-                            Style="{StaticResource BaseButtonStyle}"/>
+                            Style="{DynamicResource BaseButtonStyle}"/>
                     <ComboBox ItemsSource="{Binding AnswersForCreation, UpdateSourceTrigger=PropertyChanged}"
-                              Style="{StaticResource BaseComboBoxStyle}"
+                              Style="{DynamicResource BaseComboBoxStyle}"
                               ItemTemplate="{StaticResource ExerciseCreationLeftComboBoxTemplate}"
-                              Width="200"/>
+                              Width="300"/>
                 </StackPanel>
                 <Button Command="{Binding CreateOrEditExerciseCommand}"
-                        Style="{StaticResource CreateExerciseButtonStyle}"
+                        Style="{DynamicResource CreateExerciseButtonStyle}"
                         Width="300">
                 </Button>
                 <Button Content="Удалить выбранное задание"
                         Command="{Binding DeleteSelectedExerciseCommand}"
-                        Style="{StaticResource BaseButtonStyle}"
+                        Style="{DynamicResource BaseButtonStyle}"
                         Width="300"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Stretch">
             <Label Content="Просмотр заданий"
-                   Style="{StaticResource BigLabelStyle}"/>
+                   Style="{DynamicResource BigLabelStyle}"/>
             <ListView ItemsSource="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}"
                       ItemTemplate="{StaticResource ExerciseCreationListViewTemplate}"
-                      Style="{StaticResource BaseListViewStyle}"/>
+                      Style="{DynamicResource BaseListViewStyle}"/>
         </StackPanel>
     </Grid>
 </UserControl>

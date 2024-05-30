@@ -10,7 +10,7 @@
                    Style="{DynamicResource ComboBoxLabelStyle}"/>
             <ComboBox ItemsSource="{Binding Answers}"
                       ItemTemplate="{DynamicResource ExerciseCreationRightComboBoxTemplate}"
-                      Style="{DynamicResource BaseComboBoxStyle}"/>
+                      Style="{DynamicResource NonSelectableComboBoxStyle}"/>
         </StackPanel>
     </DataTemplate>
 </ResourceDictionary>

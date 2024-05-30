@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="MokshenDesktop.View.ThemesView.CasesWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MokshenDesktop.View.ThemesView"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource CasesExerciseLabelText}"
+                   Grid.Column="0" Grid.Row="1"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case1LabelText}"
+                   Grid.Column="0" Grid.Row="2"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case2LabelText}"
+                   Grid.Column="0" Grid.Row="3"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case3LabelText}"
+                   Grid.Column="0" Grid.Row="4"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case4LabelText}"
+                   Grid.Column="0" Grid.Row="5"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case5LabelText}"
+                   Grid.Column="0" Grid.Row="6"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case6LabelText}"
+                   Grid.Column="0" Grid.Row="7"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case7LabelText}"
+                   Grid.Column="0" Grid.Row="8"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case8LabelText}"
+                   Grid.Column="0" Grid.Row="9"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case9LabelText}"
+                   Grid.Column="0" Grid.Row="10"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case10LabelText}"
+                   Grid.Column="0" Grid.Row="11"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case11LabelText}"
+                   Grid.Column="0" Grid.Row="12"/>
+
+        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
+                   Content="{DynamicResource Case12LabelText}"
+                   Grid.Column="0" Grid.Row="13"/>
+
+        <Label Style="{DynamicResource ThemesLabelStyle}"
+                   Content="{DynamicResource CasesWordLabelText}"
+                   Grid.Column="1" Grid.Row="1"/>
+
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="2"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="3"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="4"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="5"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="6"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="7"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="8"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="9"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="10"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="11"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="12"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="13"/>
+        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
+                     Grid.Column="1" Grid.Row="14"/>
+    </Grid>
+</UserControl>

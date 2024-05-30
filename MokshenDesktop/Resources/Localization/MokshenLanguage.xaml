@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:clr="clr-namespace:System;assembly=mscorlib">
+    
     <clr:String x:Key="WelcomeLoginLabelText">Сувама васта</clr:String>
     <clr:String x:Key="WelcomeRegisterLabelText">Регистрациясь</clr:String>
     <clr:String x:Key="LoginLabelText">Логинце</clr:String>
@@ -15,6 +16,7 @@
     <clr:String x:Key="DoExerciseLabelText">Тик заданиять</clr:String>
     <clr:String x:Key="GetMarkLabelText">Получак оценкать</clr:String>
     <clr:String x:Key="BestWishesLabelText">Лацкас тонафнек!</clr:String>
+    <clr:String x:Key="FinishExerciseLabelText">Аделамс заданиять</clr:String>
 
     <clr:String x:Key="CasesLabelText">Падежт</clr:String>
     <clr:String x:Key="TensesLabelText">Пингтне</clr:String>
@@ -25,6 +27,23 @@
     <clr:String x:Key="AdjectiveLabelText">Прилагательнай</clr:String>
     <clr:String x:Key="VerbLabelText">Глаголсь</clr:String>
     <clr:String x:Key="AntonymsLabelText">Антонимт</clr:String>
+
+    <clr:String x:Key="CasesWordLabelText">Валбец</clr:String>
+    <clr:String x:Key="CasesExerciseLabelText">Падежсь</clr:String>
+    <clr:String x:Key="Case1LabelText">Именительнай</clr:String>
+    <clr:String x:Key="Case2LabelText">Родительнай</clr:String>
+    <clr:String x:Key="Case3LabelText">Дательнай</clr:String>
+    <clr:String x:Key="Case4LabelText">Отложительнай</clr:String>
+    <clr:String x:Key="Case5LabelText">Местнай</clr:String>
+    <clr:String x:Key="Case6LabelText">Исходнай</clr:String>
+    <clr:String x:Key="Case7LabelText">Направительно-вносительнай</clr:String>
+    <clr:String x:Key="Case8LabelText">Переместительнай</clr:String>
+    <clr:String x:Key="Case9LabelText">Сравнительнай</clr:String>
+    <clr:String x:Key="Case10LabelText">Изъяснительнай</clr:String>
+    <clr:String x:Key="Case11LabelText">Превратительнай</clr:String>
+    <clr:String x:Key="Case12LabelText">Причиннай</clr:String>
+
+    <clr:String x:Key="RootExerciseHelpTextBlock">Тя заданияса тондиет кармай эревама однокоренной валхнень эзда мумс лишняйть и выбрать сонь</clr:String>
 
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/russian.png"></BitmapImage>
 </ResourceDictionary>

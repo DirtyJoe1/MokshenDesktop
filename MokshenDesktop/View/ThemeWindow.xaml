@@ -18,37 +18,37 @@
         <StackPanel Orientation="Vertical" VerticalAlignment="Top"
                     Margin="50">
             <Label Content="{DynamicResource WelcomeThemesLabelText}"
-                   Style="{StaticResource BigLabelStyle}"/>
+                   Style="{DynamicResource BigLabelStyle}"/>
             <Label Content="{Binding Username}"
-                   Style="{StaticResource BigLabelStyle}"/>
+                   Style="{DynamicResource BigLabelStyle}"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center"
                     Margin="50 25">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
-                    <Button Style="{StaticResource CheckMarkButtonStyle}"/>
+                    <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
                     <Label Content="{DynamicResource SelectThemeLabelText}"
-                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                           Style="{DynamicResource ThemesNoMarginLabelStyle}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
                     <Label Content="{DynamicResource DoExerciseLabelText}"
-                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                           Style="{DynamicResource ThemesNoMarginLabelStyle}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
                     <Label Content="{DynamicResource GetMarkLabelText}"
-                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                           Style="{DynamicResource ThemesNoMarginLabelStyle}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button Style="{DynamicResource CheckMarkButtonStyle}"/>
                     <Label Content="{DynamicResource BestWishesLabelText}"
-                           Style="{StaticResource ThemesNoMarginLabelStyle}"/>
+                           Style="{DynamicResource ThemesNoMarginLabelStyle}"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Margin="50">
-            <Button Style="{StaticResource BaseButtonStyle}"
+            <Button Style="{DynamicResource BaseButtonStyle}"
                     Width="120" Height="60"
                     Command="{Binding GoBackCommand}"
                     HorizontalAlignment="Center"
@@ -69,97 +69,96 @@
             </Grid.RowDefinitions>
             
             <StackPanel Grid.Column="0" Grid.Row="0" 
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource CasesThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Style="{DynamicResource ThemesButtonStyle}"
+                    Command="{Binding NavigateCasesCommand}"/>
                 <Label Content="{DynamicResource CasesLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
             
             <StackPanel Grid.Column="1" Grid.Row="0"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource TensesThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource TensesLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
             
             <StackPanel Grid.Column="2" Grid.Row="0"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource NumeralThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource NumeralLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
             
             <StackPanel Grid.Column="0" Grid.Row="1"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource RootThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource RootLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
             
             <StackPanel Grid.Column="1" Grid.Row="1"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource SentenceThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource SentenceLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2" Grid.Row="1"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource SuffixThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource SuffixLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
 
 
             <StackPanel Grid.Column="0" Grid.Row="2"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource AdjectiveThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource AdjectiveLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
 
 
             <StackPanel Grid.Column="1" Grid.Row="2"
-                        Style="{StaticResource ThemesStackPanelStyle}">
+                        Style="{DynamicResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource VerbThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource VerbLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2" Grid.Row="2"
                         Style="{StaticResource ThemesStackPanelStyle}">
                 <Button Width="120" Height="120" 
                     Content="{StaticResource AntonymsThemeImage}"
-                    Style="{StaticResource ThemesButtonStyle}"
+                    Style="{DynamicResource ThemesButtonStyle}"
                     Command="{Binding NavigateRootCommand}"/>
                 <Label Content="{DynamicResource AntonymsLabelText}"
-                       Style="{StaticResource ThemesLabelStyle}"/>
+                       Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
-            
         </Grid>
         </Grid>
 </UserControl>

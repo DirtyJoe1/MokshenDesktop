@@ -1,13 +1,15 @@
 ﻿<Application x:Class="MokshenDesktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MokshenDesktop">
+             xmlns:local="clr-namespace:MokshenDesktop"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resources/Styles/LightMode.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
                 <ResourceDictionary Source="/Resources/Localization/MokshenLanguage.xaml" x:Name="MokshenResource" />
                 <ResourceDictionary Source="/Resources/Styles/Shared.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/LightMode.xaml" x:Name="LightTheme"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

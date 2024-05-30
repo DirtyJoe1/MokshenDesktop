@@ -16,30 +16,30 @@
                     Grid.Column="1"
                     VerticalAlignment="Top">
             <Label Content="{DynamicResource WelcomeRegisterLabelText}"
-                       Style="{StaticResource BigLabelStyle}"
+                       Style="{DynamicResource BigLabelStyle}"
                        Margin="0 10 0 100"/>
             <Label Content="{DynamicResource LoginLabelText}"
-                   Style="{StaticResource BaseLabelStyle}"/>
+                   Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding RUsername}"
-                     Style="{StaticResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource BaseTextBoxStyle}"/>
             <Label Content="{DynamicResource EmailLabelText}"
-                   Style="{StaticResource BaseLabelStyle}"/>
+                   Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding Email}"
-                     Style="{StaticResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource BaseTextBoxStyle}"/>
             <Label Content="{DynamicResource PasswordLabelText}"
-                   Style="{StaticResource BaseLabelStyle}"/>
+                   Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding RPassword}"
-                     Style="{StaticResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource BaseTextBoxStyle}"/>
             <Label Content="{DynamicResource PasswordConfirmLabelText}"
-                   Style="{StaticResource BaseLabelStyle}"/>
+                   Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding PasswordConfirm}"
-                     Style="{StaticResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource BaseTextBoxStyle}"/>
             <Button Content="{DynamicResource RegisterButtonText}"
                     Command="{Binding NavigateFinishRegisterCommand}"
-                    Style="{StaticResource BaseButtonStyle}"/>
+                    Style="{DynamicResource BaseButtonStyle}"/>
             <Button Content="{DynamicResource GoBackButtonText}"
                     Command="{Binding NavigateLoginCommand}"
-                    Style="{StaticResource BaseButtonStyle}"/>
+                    Style="{DynamicResource BaseButtonStyle}"/>
         </StackPanel>
     </Grid>
 </UserControl>

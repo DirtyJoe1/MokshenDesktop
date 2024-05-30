@@ -16,6 +16,7 @@ namespace MokshenDesktop.ViewModel
     {
         public Store _store;
         private bool _isCurrentLanguageIsRussian = false;
+        private bool _isCurrentThemeIsLight = true;
         public ICommand GoBackCommand { get; set; }
         public bool IsCurrentLanguageIsRussian
         {
@@ -24,6 +25,15 @@ namespace MokshenDesktop.ViewModel
             {
                 _isCurrentLanguageIsRussian = value;
                 OnPropertyChanged(nameof(IsCurrentLanguageIsRussian));
+            }
+        }
+        public bool IsCurrentThemeIsLight
+        {
+            get => _isCurrentThemeIsLight;
+            set
+            {
+                _isCurrentThemeIsLight = value;
+                OnPropertyChanged(nameof(IsCurrentThemeIsLight));
             }
         }
         public void SwitchLanguage()
@@ -55,6 +65,37 @@ namespace MokshenDesktop.ViewModel
                 }
                 var russianResourceDictionary = new ResourceDictionary { Source = new Uri("/Resources/Localization/RussianLanguage.xaml", UriKind.Relative) };
                 Application.Current.Resources.MergedDictionaries.Add(russianResourceDictionary);
+            }
+        }
+        public void SwitchTheme()
+        {
+            if (IsCurrentThemeIsLight)
+            {
+                IsCurrentThemeIsLight = false;
+                foreach (var dict in Application.Current.Resources.MergedDictionaries.ToList())
+                {
+                    if (dict.Source == new Uri("/Resources/Styles/LightMode.xaml", UriKind.Relative))
+                    {
+                        Application.Current.Resources.MergedDictionaries.Remove(dict);
+                        break;
+                    }
+                }
+                var darkModeResourceDictionary = new ResourceDictionary { Source = new Uri("/Resources/Styles/DarkMode.xaml", UriKind.Relative) };
+                Application.Current.Resources.MergedDictionaries.Add(darkModeResourceDictionary);
+            }
+            else
+            {
+                IsCurrentThemeIsLight = true;
+                foreach (var dict in Application.Current.Resources.MergedDictionaries.ToList())
+                {
+                    if (dict.Source == new Uri("/Resources/Styles/DarkMode.xaml", UriKind.Relative))
+                    {
+                        Application.Current.Resources.MergedDictionaries.Remove(dict);
+                        break;
+                    }
+                }
+                var lightModeResourceDictionary = new ResourceDictionary { Source = new Uri("/Resources/Styles/LightMode.xaml", UriKind.Relative) };
+                Application.Current.Resources.MergedDictionaries.Add(lightModeResourceDictionary);
             }
         }
     }

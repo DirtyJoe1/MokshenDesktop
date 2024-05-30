@@ -16,12 +16,14 @@ namespace MokshenDesktop.ViewModel
     {
         public ViewModelBase CurrentViewModel => _store.CurrentViewModel;
         public ICommand SwitchLanguageCommand { get; }
+        public ICommand SwitchThemeCommand { get; }
         public ICommand ExitCommand { get; }
         public MainViewModel(Store navigationStore)
         {
             _store = navigationStore;
             _store.CurrentViewModelChanged += OnCurrentViewModelChanged;
             SwitchLanguageCommand = new RelayCommand(SwitchLanguage);
+            SwitchThemeCommand = new RelayCommand(SwitchTheme);
             ExitCommand = new RelayCommand(Exit);
         }
         public void Exit()

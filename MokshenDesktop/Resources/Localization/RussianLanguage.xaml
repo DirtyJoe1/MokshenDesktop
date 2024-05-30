@@ -11,10 +11,11 @@
     <clr:String x:Key="RegisterButtonText">Зарегистрироваться</clr:String>
     <clr:String x:Key="GoBackButtonText">Вернуться</clr:String>
     <clr:String x:Key="WelcomeThemesLabelText">Здравствуй,</clr:String>
-    <clr:String x:Key="SelectThemeLabelText">Вебери тему</clr:String>
+    <clr:String x:Key="SelectThemeLabelText">Выбери тему</clr:String>
     <clr:String x:Key="DoExerciseLabelText">Выполни задание</clr:String>
     <clr:String x:Key="GetMarkLabelText">Получи оценку</clr:String>
     <clr:String x:Key="BestWishesLabelText">Отличной учебы!</clr:String>
+    <clr:String x:Key="FinishExerciseLabelText">Закончить задание</clr:String>
 
     <clr:String x:Key="CasesLabelText">Падежи</clr:String>
     <clr:String x:Key="TensesLabelText">Времена</clr:String>
@@ -24,7 +25,25 @@
     <clr:String x:Key="SuffixLabelText">Суффикс</clr:String>
     <clr:String x:Key="AdjectiveLabelText">Прилагательное</clr:String>
     <clr:String x:Key="VerbLabelText">Глагол</clr:String>
-    <clr:String x:Key="AntonymsLabelText">Антонимы</clr:String> 
+    <clr:String x:Key="AntonymsLabelText">Антонимы</clr:String>
+
+    <clr:String x:Key="CasesWordLabelText">Склоняемое слово</clr:String>
+    <clr:String x:Key="CasesExerciseLabelText">Падежи</clr:String>
+    <clr:String x:Key="Case1LabelText">Именительный</clr:String>
+    <clr:String x:Key="Case2LabelText">Родительный</clr:String>
+    <clr:String x:Key="Case3LabelText">Дательный</clr:String>
+    <clr:String x:Key="Case4LabelText">Отложительный</clr:String>
+    <clr:String x:Key="Case5LabelText">Местный</clr:String>
+    <clr:String x:Key="Case6LabelText">Исходный</clr:String>
+    <clr:String x:Key="Case7LabelText">Направительно-вносительный</clr:String>
+    <clr:String x:Key="Case8LabelText">Переместительный</clr:String>
+    <clr:String x:Key="Case9LabelText">Сравнительный</clr:String>
+    <clr:String x:Key="Case10LabelText">Изъяснительный</clr:String>
+    <clr:String x:Key="Case11LabelText">Превратительный</clr:String>
+    <clr:String x:Key="Case12LabelText">Причинный</clr:String>
+
+    <clr:String x:Key="RootExerciseHelpTextBlock">В данном задании вам будет необходимо среди однокоренных слов найти лишнее и выбрать его</clr:String>
+
 
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/mokshen.png"></BitmapImage>
 </ResourceDictionary>

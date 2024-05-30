@@ -13,8 +13,11 @@
     <None Remove="Resources\Images\arrowleft.png" />
     <None Remove="Resources\Images\arrowright.png" />
     <None Remove="Resources\Images\checkmark.png" />
+    <None Remove="Resources\Images\DarkTheme.png" />
     <None Remove="Resources\Images\exit.png" />
+    <None Remove="Resources\Images\help.png" />
     <None Remove="Resources\Images\icon.png" />
+    <None Remove="Resources\Images\LightTheme.png" />
     <None Remove="Resources\Images\mokshen.png" />
     <None Remove="Resources\Images\Root.png" />
     <None Remove="Resources\Images\russian.png" />
@@ -33,6 +36,7 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -51,10 +55,19 @@
     <Resource Include="Resources\Images\checkmark.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Images\DarkTheme.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\exit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Images\help.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\LightTheme.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\mokshen.png">
@@ -108,10 +121,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\Styles\DarkMode\" />
   </ItemGroup>
 
 </Project>
