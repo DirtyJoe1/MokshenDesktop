@@ -10,12 +10,22 @@
     <clr:String x:Key="LoginButtonText">Войти</clr:String>
     <clr:String x:Key="RegisterButtonText">Зарегистрироваться</clr:String>
     <clr:String x:Key="GoBackButtonText">Вернуться</clr:String>
+    <clr:String x:Key="LoginHintText">Введите логин</clr:String>
+    <clr:String x:Key="PasswordHintText">Введите пароль</clr:String>
+    <clr:String x:Key="SecondPasswordHintText">Введите пароль еще раз</clr:String>
+    <clr:String x:Key="EmailHintText">Введите почту</clr:String>
+
     <clr:String x:Key="WelcomeThemesLabelText">Здравствуй,</clr:String>
     <clr:String x:Key="SelectThemeLabelText">Выбери тему</clr:String>
     <clr:String x:Key="DoExerciseLabelText">Выполни задание</clr:String>
     <clr:String x:Key="GetMarkLabelText">Получи оценку</clr:String>
     <clr:String x:Key="BestWishesLabelText">Отличной учебы!</clr:String>
     <clr:String x:Key="FinishExerciseLabelText">Закончить задание</clr:String>
+
+    <clr:String x:Key="LoginValidationViolationBlockText">Логин должен быть длиннее</clr:String>
+    <clr:String x:Key="PasswordValidationViolationBlockText">Пароль должен быть длиннее</clr:String>
+    <clr:String x:Key="NullOrEmptyLoginBlockText">Вы не написали логин</clr:String>
+    <clr:String x:Key="NullOrEmptyPasswordBlockText">Вы не написали пароль</clr:String>
 
     <clr:String x:Key="CasesLabelText">Падежи</clr:String>
     <clr:String x:Key="TensesLabelText">Времена</clr:String>

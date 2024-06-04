@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MokshenDesktop.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Height="900" Width="1200">
     <Grid Background="{DynamicResource Background}">
@@ -21,19 +22,23 @@
             <Label Content="{DynamicResource LoginLabelText}"
                    Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding RUsername}"
-                     Style="{DynamicResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource PlaceholderTextBox}"
+                     materialDesign:HintAssist.Hint="{DynamicResource LoginHintText}"/>
             <Label Content="{DynamicResource EmailLabelText}"
                    Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding Email}"
-                     Style="{DynamicResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource PlaceholderTextBox}"
+                     materialDesign:HintAssist.Hint="{DynamicResource EmailHintText}"/>
             <Label Content="{DynamicResource PasswordLabelText}"
                    Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding RPassword}"
-                     Style="{DynamicResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource PlaceholderTextBox}"
+                     materialDesign:HintAssist.Hint="{DynamicResource PasswordHintText}"/>
             <Label Content="{DynamicResource PasswordConfirmLabelText}"
                    Style="{DynamicResource BaseLabelStyle}"/>
             <TextBox Text="{Binding PasswordConfirm}"
-                     Style="{DynamicResource BaseTextBoxStyle}"/>
+                     Style="{DynamicResource PlaceholderTextBox}"
+                     materialDesign:HintAssist.Hint="{DynamicResource SecondPasswordHintText}"/>
             <Button Content="{DynamicResource RegisterButtonText}"
                     Command="{Binding NavigateFinishRegisterCommand}"
                     Style="{DynamicResource BaseButtonStyle}"/>

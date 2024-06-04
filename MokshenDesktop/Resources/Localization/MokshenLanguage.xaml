@@ -10,13 +10,25 @@
     <clr:String x:Key="EmailLabelText">Почтаце</clr:String>
     <clr:String x:Key="LoginButtonText">Сувамс</clr:String>
     <clr:String x:Key="RegisterButtonText">Тиемс регистрациять</clr:String>
+    <clr:String x:Key="LoginHintText">Тяштьк логинцень</clr:String>
+    <clr:String x:Key="PasswordHintText">Тяштьк парольцень</clr:String>
+    <clr:String x:Key="SecondPasswordHintText">Тяштьк парольцень тага весть</clr:String>
+    <clr:String x:Key="EmailHintText">Тяштьк почтацень</clr:String>
     <clr:String x:Key="GoBackButtonText">Меки</clr:String>
+
+
     <clr:String x:Key="WelcomeThemesLabelText">Шумбрат,</clr:String>
     <clr:String x:Key="SelectThemeLabelText">Выбрак темать</clr:String>
     <clr:String x:Key="DoExerciseLabelText">Тик заданиять</clr:String>
     <clr:String x:Key="GetMarkLabelText">Получак оценкать</clr:String>
     <clr:String x:Key="BestWishesLabelText">Лацкас тонафнек!</clr:String>
     <clr:String x:Key="FinishExerciseLabelText">Аделамс заданиять</clr:String>
+
+    <clr:String x:Key="LoginValidationViolationBlockText">Логиньсь должен улемс сяда оцю</clr:String>
+    <clr:String x:Key="PasswordValidationViolationBlockText">Парольсь должен улемс сяда оцю</clr:String>
+    <clr:String x:Key="NullOrEmptyLoginBlockText">Тон ашеть тяште логинцень</clr:String>
+    <clr:String x:Key="NullOrEmptyPasswordBlockText">Тон ашеть тяште парольцень</clr:String>
+
 
     <clr:String x:Key="CasesLabelText">Падежт</clr:String>
     <clr:String x:Key="TensesLabelText">Пингтне</clr:String>

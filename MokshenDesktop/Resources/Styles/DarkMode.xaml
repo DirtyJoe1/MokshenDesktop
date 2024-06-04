@@ -7,6 +7,8 @@
     <SolidColorBrush x:Key="TextColor">White</SolidColorBrush>
     <SolidColorBrush x:Key="AccentColor">#263151</SolidColorBrush>
     <SolidColorBrush x:Key="SecondaryAccentColor">#495f9d</SolidColorBrush>
+    <SolidColorBrush x:Key="AlternativeAccentColor">#AC3146</SolidColorBrush>
+    <SolidColorBrush x:Key="AlternativeSecondaryAccentColor">#7e323f</SolidColorBrush>
     <ResourceDictionary.MergedDictionaries>
         <materialDesign:CustomColorTheme BaseTheme="Dark" PrimaryColor="#263151" SecondaryColor="#495f9d" />
     </ResourceDictionary.MergedDictionaries>

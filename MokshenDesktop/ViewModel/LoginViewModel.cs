@@ -25,6 +25,11 @@ namespace MokshenDesktop.ViewModel
             {
                 _username = value;
                 OnPropertyChanged(nameof(LUsername));
+                bool isEmpty = ValidationService.IsEmpty(LUsername);
+                LoginValidationViolation = !isEmpty && !ValidationService.ValidateLogin(LUsername);
+                OnPropertyChanged(nameof(LoginValidationViolation));
+                LoginIsEmpty = isEmpty;
+                OnPropertyChanged(nameof(LoginIsEmpty));
             }
         }
 
@@ -36,10 +41,59 @@ namespace MokshenDesktop.ViewModel
             {
                 _password = value;
                 OnPropertyChanged(nameof(LPassword));
+                bool isEmpty = ValidationService.IsEmpty(LPassword);
+                PasswordValidationViolation = !isEmpty && !ValidationService.ValidatePassword(LPassword);
+                OnPropertyChanged(nameof(PasswordValidationViolation));
+                PasswordIsEmpty = isEmpty;
+                OnPropertyChanged(nameof(PasswordIsEmpty));
+            }
+        }
+
+        private bool _loginValidationViolation;
+        public bool LoginValidationViolation
+        {
+            get => _loginValidationViolation;
+            set
+            {
+                _loginValidationViolation = value;
+                OnPropertyChanged(nameof(_loginValidationViolation));
+            }
+        }
+        private bool _loginIsEmpty;
+        public bool LoginIsEmpty
+        {
+            get => _loginIsEmpty;
+            set
+            {
+                _loginIsEmpty = value;
+                OnPropertyChanged(nameof(_loginIsEmpty));
+            }
+        }
+
+        private bool _passwordValidationViolation;
+        public bool PasswordValidationViolation
+        {
+            get => _passwordValidationViolation;
+            set
+            {
+                _passwordValidationViolation = value;
+                OnPropertyChanged(nameof(_passwordValidationViolation));
+            }
+        }
+        private bool _passwordIsEmpty;
+        public bool PasswordIsEmpty
+        {
+            get => _passwordIsEmpty;
+            set
+            {
+                _passwordIsEmpty = value;
+                OnPropertyChanged(nameof(_passwordIsEmpty));
             }
         }
         public ICommand NavigateRegisterCommand { get; }
         public ICommand NavigateThemesCommand { get; }
+        public ICommand TestVisibilityCommand { get; }
+
         public LoginViewModel(Store store) 
         {
             _store = store;
@@ -48,13 +102,19 @@ namespace MokshenDesktop.ViewModel
         }
         public async void NavigateThemes(Store store)
         {
+            if (ValidationService.IsAnyEmpty(LUsername, LPassword))
+            {
+                string message = "Обнаружены ошибки валидации при входе";
+                MessageBox.Show(message);
+                return;
+            }
             var login = new UserLogin
             {
                 Username = LUsername,
                 Password = LPassword
             };
             HttpResponseMessage response = await store.Repository.PostAuthenticationLogin(login);
-            if (response.IsSuccessStatusCode)  
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)  
             {
                 TokenStorage.Username = login.Username;
                 if (TokenStorage.Role == "Admin")
@@ -66,9 +126,9 @@ namespace MokshenDesktop.ViewModel
                     store.CurrentViewModel = new ThemeViewModel(store);
                 }
             }
-            else
+            else if(response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
-                MessageBox.Show(await response.Content.ReadAsStringAsync());
+                MessageBox.Show("Пользователь с таким сочетанием логина и пароля не найден");
             }
         }
         
