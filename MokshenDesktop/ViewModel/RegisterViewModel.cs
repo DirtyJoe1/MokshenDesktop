@@ -65,7 +65,6 @@ namespace MokshenDesktop.ViewModel
             NavigateFinishRegisterCommand = new RelayCommand(() => NavigateFinishRegister(_store));
             SwitchLanguageCommand = new RelayCommand(SwitchLanguage);
         }
-
         private async void NavigateFinishRegister(Store store)
         {
             if (RPassword == PasswordConfirm)

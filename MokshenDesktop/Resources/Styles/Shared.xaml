@@ -29,5 +29,6 @@
         <ResourceDictionary Source="/Resources/Styles/Elements/ListBoxes.xaml"/>
         <ResourceDictionary Source="/Resources/Styles/Elements/RadioButtons.xaml"/>
         <ResourceDictionary Source="/Resources/Styles/Elements/TextBlocks.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Elements/ScrollViewer.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -13,6 +13,13 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Width" Value="300"/>
     </Style>
+
+    <Style x:Key="CasesTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource NoPaddingTextBoxStyle}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Height" Value="25"/>
+    </Style>
+    
     <Style x:Key="PlaceholderTextBox" TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
         <Setter Property="FontFamily" Value="Fira Sans Condensed"/>
         <Setter Property="FontSize" Value="16"/>

@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:clr="clr-namespace:System;assembly=mscorlib">
-    <clr:String x:Key="WelcomeLoginLabelText">Окно входа</clr:String>
-    <clr:String x:Key="WelcomeRegisterLabelText">Окно регистрации</clr:String>
+    <clr:String x:Key="WelcomeLoginLabelText">Страница входа</clr:String>
+    <clr:String x:Key="WelcomeRegisterLabelText">Страница регистрации</clr:String>
     <clr:String x:Key="LoginLabelText">Логин</clr:String>
     <clr:String x:Key="PasswordLabelText">Пароль</clr:String>
     <clr:String x:Key="PasswordConfirmLabelText">Пароль еще раз</clr:String> 
@@ -53,6 +53,7 @@
     <clr:String x:Key="Case12LabelText">Причинный</clr:String>
 
     <clr:String x:Key="RootExerciseHelpTextBlock">В данном задании вам будет необходимо среди однокоренных слов найти лишнее и выбрать его</clr:String>
+    <clr:String x:Key="CasesxerciseHelpTextBlock">В данном задании вам будет необходимо просклонять слово "Куд" по падежам. Слово необходимо вписать ПОЛНОСТЬЮ!</clr:String>
 
 
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/mokshen.png"></BitmapImage>

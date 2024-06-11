@@ -26,6 +26,12 @@
         <Setter Property="Margin" Value="10"/>
     </Style>
 
+    <Style x:Key="CasesLabelStyle" BasedOn="{StaticResource ThemesLabelStyle}" TargetType="Label">
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
     <Style x:Key="ThemesNoMarginLabelStyle" BasedOn="{StaticResource ThemesLabelStyle}" TargetType="Label">
         <Setter Property="Margin" Value="0"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>

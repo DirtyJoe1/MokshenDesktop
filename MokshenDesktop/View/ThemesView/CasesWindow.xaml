@@ -7,107 +7,120 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1200">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource CasesExerciseLabelText}"
-                   Grid.Column="0" Grid.Row="1"/>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case1LabelText}"
-                   Grid.Column="0" Grid.Row="2"/>
+            <StackPanel Grid.Row="0">
+                <ContentControl Style="{DynamicResource HelpTextBlock}"
+                                Content="{DynamicResource CasesxerciseHelpTextBlock}"/>
+            </StackPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case2LabelText}"
-                   Grid.Column="0" Grid.Row="3"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Style="{DynamicResource BaseScrollViewerStyle}">
+            <StackPanel>
+                <DockPanel HorizontalAlignment="Stretch" Width="500">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource CasesExerciseLabelText}"/>
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource CasesWordLabelText}"
+                       HorizontalAlignment="Right"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case3LabelText}"
-                   Grid.Column="0" Grid.Row="4"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case1LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent1}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case4LabelText}"
-                   Grid.Column="0" Grid.Row="5"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case2LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent2}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case5LabelText}"
-                   Grid.Column="0" Grid.Row="6"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case3LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent3}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case6LabelText}"
-                   Grid.Column="0" Grid.Row="7"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case4LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent4}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case7LabelText}"
-                   Grid.Column="0" Grid.Row="8"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case5LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent5}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case8LabelText}"
-                   Grid.Column="0" Grid.Row="9"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case6LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent6}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case9LabelText}"
-                   Grid.Column="0" Grid.Row="10"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case7LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent7}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case10LabelText}"
-                   Grid.Column="0" Grid.Row="11"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case8LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent8}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case11LabelText}"
-                   Grid.Column="0" Grid.Row="12"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case9LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent9}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesNoMarginLabelStyle}"
-                   Content="{DynamicResource Case12LabelText}"
-                   Grid.Column="0" Grid.Row="13"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case10LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent10}"/>
+                </DockPanel>
 
-        <Label Style="{DynamicResource ThemesLabelStyle}"
-                   Content="{DynamicResource CasesWordLabelText}"
-                   Grid.Column="1" Grid.Row="1"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case11LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent11}"/>
+                </DockPanel>
 
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="2"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="3"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="4"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="5"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="6"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="7"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="8"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="9"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="10"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="11"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="12"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="13"/>
-        <TextBox Style="{DynamicResource NoPaddingTextBoxStyle}"
-                     Grid.Column="1" Grid.Row="14"/>
+                <DockPanel HorizontalAlignment="Stretch" Width="700">
+                    <Label Style="{DynamicResource CasesLabelStyle}"
+                       Content="{DynamicResource Case12LabelText}"/>
+                    <TextBox Style="{DynamicResource CasesTextBoxStyle}"
+                         Text="{Binding TextBoxContent12}"/>
+                </DockPanel>
+                <StackPanel Orientation="Horizontal" Margin="20">
+                    <Button Content="{DynamicResource FinishExerciseLabelText}"
+                            Style="{DynamicResource BaseButtonStyle}"
+                            Command="{Binding NavigateFinishExerciseCommand}"
+                            Width="200"/>
+                    <Button Style="{DynamicResource BaseButtonStyle}"
+                            Command="{Binding GoBackCommand}"
+                            Content="{DynamicResource GoBackButtonText}"
+                            Width="200"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

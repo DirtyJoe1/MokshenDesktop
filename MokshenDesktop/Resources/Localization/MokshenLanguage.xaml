@@ -56,6 +56,7 @@
     <clr:String x:Key="Case12LabelText">Причиннай</clr:String>
 
     <clr:String x:Key="RootExerciseHelpTextBlock">Тя заданияса тондиет кармай эревама однокоренной валхнень эзда мумс лишняйть и выбрать сонь</clr:String>
+    <clr:String x:Key="CasesxerciseHelpTextBlock">Тя заданияса тондиет кармай эревама просклонять валть "Куд" по падежам. Валть эряви тяштемс ПОЛНОСТЬЮ!</clr:String>
 
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/russian.png"></BitmapImage>
 </ResourceDictionary>
