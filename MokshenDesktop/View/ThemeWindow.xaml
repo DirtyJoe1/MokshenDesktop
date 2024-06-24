@@ -83,7 +83,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource TensesThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding InDevelepmentCommand}"/>
                 <Label Content="{DynamicResource TensesLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
@@ -93,7 +93,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource NumeralThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding NavigateNumeralCommand}"/>
                 <Label Content="{DynamicResource NumeralLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
@@ -113,7 +113,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource SentenceThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding InDevelepmentCommand}"/>
                 <Label Content="{DynamicResource SentenceLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
@@ -123,7 +123,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource SuffixThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding InDevelepmentCommand}"/>
                 <Label Content="{DynamicResource SuffixLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
@@ -134,7 +134,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource AdjectiveThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding InDevelepmentCommand}"/>
                 <Label Content="{DynamicResource AdjectiveLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
@@ -145,7 +145,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource VerbThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding NavigateVerbCommand}"/>
                 <Label Content="{DynamicResource VerbLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>
@@ -155,7 +155,7 @@
                 <Button Width="120" Height="120" 
                     Content="{StaticResource AntonymsThemeImage}"
                     Style="{DynamicResource ThemesButtonStyle}"
-                    Command="{Binding NavigateRootCommand}"/>
+                    Command="{Binding InDevelepmentCommand}"/>
                 <Label Content="{DynamicResource AntonymsLabelText}"
                        Style="{DynamicResource ThemesLabelStyle}"/>
             </StackPanel>

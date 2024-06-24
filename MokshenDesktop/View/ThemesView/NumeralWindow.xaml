@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="MokshenDesktop.View.ThemesView.NumeralWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MokshenDesktop.View.ThemesView"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <ContentControl Style="{DynamicResource HelpTextBlock}"
+                            Content="{DynamicResource NumeralxerciseHelpTextBlock}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" >
+            <DockPanel Width="900">
+                <ListBox DockPanel.Dock="Left" ItemsSource="{Binding Exercises}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ListBox ItemsSource="{Binding Answers}">
+                                <ListBox.ItemTemplate >
+                                    <DataTemplate>
+                                        <Label Content="{Binding Content}" Style="{DynamicResource BaseLabelStyle}"/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel DockPanel.Dock="Right">
+                    <TextBox Text="{Binding TextBoxContent1}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent2}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent3}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent4}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent5}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent6}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent7}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                    <TextBox Text="{Binding TextBoxContent8}" Style="{DynamicResource NumeralTextBoxStyle}"/>
+                </StackPanel>
+            </DockPanel>
+            <StackPanel >
+                <Button Content="{DynamicResource FinishExerciseLabelText}"
+                    Style="{DynamicResource BaseButtonStyle}"
+                    Command="{Binding NavigateFinishExerciseCommand}"
+                    HorizontalAlignment="Left"
+                    Width="200"/>
+                <Button Style="{DynamicResource BaseButtonStyle}"
+                    Command="{Binding GoBackCommand}"
+                    Content="{DynamicResource GoBackButtonText}"
+                    HorizontalAlignment="Left"
+                    Width="200"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

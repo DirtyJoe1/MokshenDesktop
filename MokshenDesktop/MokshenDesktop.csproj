@@ -31,6 +31,14 @@
     <None Remove="Resources\Images\Themes\Suffix.png" />
     <None Remove="Resources\Images\Themes\Tenses.png" />
     <None Remove="Resources\Images\Themes\Verb.png" />
+    <None Remove="Resources\Images\Themes\Verb\Verb1.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb2.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb3.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb4.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb5.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb6.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb7.jpg" />
+    <None Remove="Resources\Images\Themes\Verb\Verb8.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -104,6 +112,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\Themes\Verb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Themes\Verb\Verb8.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

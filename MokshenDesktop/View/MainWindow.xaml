@@ -58,6 +58,12 @@
                 <DataTemplate DataType="{x:Type themesviewmodels:CasesViewModel}">
                     <themesviews:CasesWindow/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type themesviewmodels:NumeralViewModel}">
+                    <themesviews:NumeralWindow/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type themesviewmodels:VerbViewModel}">
+                    <themesviews:Verb/>
+                </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
     </Grid>

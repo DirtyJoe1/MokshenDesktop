@@ -1,0 +1,26 @@
+﻿<Window x:Class="MokshenDesktop.View.CustomMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MokshenDesktop.View"
+        mc:Ignorable="d"
+        xmlns:viewmodels="clr-namespace:MokshenDesktop.ViewModel"
+        xmlns:views="clr-namespace:MokshenDesktop.View"
+        xmlns:themesviewmodels="clr-namespace:MokshenDesktop.ViewModel.ThemesViewModel"
+        xmlns:themesviews="clr-namespace:MokshenDesktop.View.ThemesView"
+        WindowStartupLocation="CenterScreen"
+        Icon="\Resources\Images\Icon.png"
+        Title="Сообщение" Height="300" Width="400"
+        ResizeMode="CanMinimize"
+        Background="{DynamicResource Background}">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="0">
+            <ContentControl Style="{DynamicResource MessageTextBlock}"
+                            x:Name="ContentTextBlock"/>
+        </StackPanel>
+        <Button Style="{DynamicResource BaseButtonStyle}"
+                Content="{DynamicResource GoBackButtonText}"
+                Click="Button_Click"/>
+    </StackPanel>
+</Window>

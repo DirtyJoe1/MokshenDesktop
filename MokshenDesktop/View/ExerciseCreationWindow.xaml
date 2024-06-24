@@ -54,12 +54,16 @@
                         Width="300"/>
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Stretch">
-            <Label Content="Просмотр заданий"
+        <ScrollViewer Grid.Column="1" HorizontalAlignment="Stretch"
+                      VerticalScrollBarVisibility="Visible"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Label Content="Просмотр заданий"
                    Style="{DynamicResource BigLabelStyle}"/>
-            <ListView ItemsSource="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}"
+                <ListView ItemsSource="{Binding Exercises}" SelectedItem="{Binding SelectedExercise}"
                       ItemTemplate="{StaticResource ExerciseCreationListViewTemplate}"
                       Style="{DynamicResource BaseListViewStyle}"/>
-        </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

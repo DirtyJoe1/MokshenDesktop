@@ -57,6 +57,8 @@
 
     <clr:String x:Key="RootExerciseHelpTextBlock">Тя заданияса тондиет кармай эревама однокоренной валхнень эзда мумс лишняйть и выбрать сонь</clr:String>
     <clr:String x:Key="CasesxerciseHelpTextBlock">Тя заданияса тондиет кармай эревама просклонять валть "Куд" по падежам. Валть эряви тяштемс ПОЛНОСТЬЮ!</clr:String>
+    <clr:String x:Key="NumeralxerciseHelpTextBlock">Тя заданияса тондиет кармай эревама решамс примерхтнень и тяштемс синь числакс</clr:String>
+    <clr:String x:Key="VerbexerciseHelpTextBlock">Тя заданияса тондиет кармай эревама ётафтомс мокшекс глаголхтнень, конатне архтневкснень ала, и путомс синь кочкаф сай пингти (3-е л., ед.ч) (Нолдакс инфинитивть -кармамс-).</clr:String>
 
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/russian.png"></BitmapImage>
 </ResourceDictionary>

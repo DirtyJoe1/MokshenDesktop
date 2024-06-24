@@ -26,4 +26,27 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="MessageTextBlock" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Border x:Name="Border"
+                            Background="{DynamicResource AccentColor}"
+                            BorderThickness="2"
+                            CornerRadius="10"
+                            Padding="10"
+                            Margin="10">
+                        <Grid>
+                            <TextBlock x:Name="TextBlock"
+                                       Style="{DynamicResource BaseTextBlockStyle}"
+                                       FontSize="24"
+                                       Text="{TemplateBinding Content}"
+                                       Grid.Column="1"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

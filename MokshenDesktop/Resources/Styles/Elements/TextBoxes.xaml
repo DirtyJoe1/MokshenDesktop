@@ -27,4 +27,8 @@
         <Setter Property="materialDesign:HintAssist.FontFamily" Value="Fira Sans Condensed"/>
         <Setter Property="materialDesign:HintAssist.Foreground" Value="{DynamicResource AccentColor}"/>
     </Style>
+
+    <Style x:Key="NumeralTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
+        <Setter Property="Height" Value="0.68in"/>
+    </Style>
 </ResourceDictionary>

@@ -54,7 +54,8 @@
 
     <clr:String x:Key="RootExerciseHelpTextBlock">В данном задании вам будет необходимо среди однокоренных слов найти лишнее и выбрать его</clr:String>
     <clr:String x:Key="CasesxerciseHelpTextBlock">В данном задании вам будет необходимо просклонять слово "Куд" по падежам. Слово необходимо вписать ПОЛНОСТЬЮ!</clr:String>
-
+    <clr:String x:Key="NumeralxerciseHelpTextBlock">В данном задании вам будет необходимо решить словеснозаписанные примеры, и записать численный ответ</clr:String>
+    <clr:String x:Key="VerbexerciseHelpTextBlock">В данном задании вам будет необходимо перевести на мокшанский глаголы, изображенные на рисунках, и поставить их в составное будущее время (3-е л., ед.ч) (Используйте инфинитив -кармамс-).</clr:String>
 
     <BitmapImage x:Key="LanguagePng" UriSource="/Resources/Images/mokshen.png"></BitmapImage>
 </ResourceDictionary>

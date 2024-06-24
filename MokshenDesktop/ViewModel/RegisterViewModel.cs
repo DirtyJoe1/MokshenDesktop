@@ -2,6 +2,7 @@
 using MokshenDesktop.Model;
 using MokshenDesktop.Resources.Commands;
 using MokshenDesktop.Resources.Services;
+using MokshenDesktop.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,7 +81,7 @@ namespace MokshenDesktop.ViewModel
                 if (response.IsSuccessStatusCode)
                 {
                     store.CurrentViewModel = new LoginViewModel(store);
-                    MessageBox.Show(response.StatusCode.ToString());
+                    new CustomMessageBox("Успешно зарегистрировано").Show();
                 }
                 else
                 {

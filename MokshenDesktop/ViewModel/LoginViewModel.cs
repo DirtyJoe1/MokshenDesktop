@@ -2,6 +2,7 @@
 using MokshenDesktop.Model;
 using MokshenDesktop.Resources.Commands;
 using MokshenDesktop.Resources.Services;
+using MokshenDesktop.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,8 +105,8 @@ namespace MokshenDesktop.ViewModel
         {
             if (ValidationService.IsAnyEmpty(LUsername, LPassword))
             {
-                string message = "Обнаружены ошибки валидации при входе";
-                MessageBox.Show(message);
+                string message = "Обнаружены ошибки заполнения при входе";
+                new CustomMessageBox(message).Show();
                 return;
             }
             var login = new UserLogin

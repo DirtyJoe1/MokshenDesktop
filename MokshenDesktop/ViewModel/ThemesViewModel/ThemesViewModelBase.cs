@@ -2,6 +2,7 @@
 using MokshenDesktop.Model;
 using MokshenDesktop.Resources.Commands;
 using MokshenDesktop.Resources.Services;
+using MokshenDesktop.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -69,7 +70,7 @@ namespace MokshenDesktop.ViewModel.ThemesViewModel
         }
         public void NavigateFinishExercise(Store store)
         {
-            SendExercisesAsync().ContinueWith(t => MessageBox.Show(Percentage), TaskScheduler.FromCurrentSynchronizationContext());
+            SendExercisesAsync().ContinueWith(t => new CustomMessageBox(Percentage).Show(), TaskScheduler.FromCurrentSynchronizationContext());
             store.CurrentViewModel = new ThemeViewModel(store);
         }
         public async Task GetExercises()

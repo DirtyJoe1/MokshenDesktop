@@ -7,12 +7,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace MokshenDesktop.ViewModel.ThemesViewModel
 {
-    class CasesViewModel : ThemesViewModelBase
+    class NumeralViewModel : ThemesViewModelBase
     {
         #region [TextBoxesContent]
         private string _textBoxContent1;
@@ -100,58 +99,14 @@ namespace MokshenDesktop.ViewModel.ThemesViewModel
                 OnPropertyChanged(nameof(_textBoxContent8));
             }
         }
-
-        private string _textBoxContent9;
-        public string TextBoxContent9
-        {
-            get => _textBoxContent9;
-            set
-            {
-                _textBoxContent9 = value;
-                OnPropertyChanged(nameof(_textBoxContent9));
-            }
-        }
-
-        private string _textBoxContent10;
-        public string TextBoxContent10
-        {
-            get => _textBoxContent10;
-            set
-            {
-                _textBoxContent10 = value;
-                OnPropertyChanged(nameof(_textBoxContent10));
-            }
-        }
-        private string _textBoxContent11;
-        public string TextBoxContent11
-        {
-            get => _textBoxContent11;
-            set
-            {
-                _textBoxContent11 = value;
-                OnPropertyChanged(nameof(_textBoxContent11));
-            }
-        }
-        private string _textBoxContent12;
-        public string TextBoxContent12
-        {
-            get => _textBoxContent12;
-            set
-            {
-                _textBoxContent12 = value;
-                OnPropertyChanged(nameof(_textBoxContent12));
-            }
-        }
         #endregion
-
         public ICommand NavigateFinishExerciseCommand { get; }
-
-        public CasesViewModel(Store store)
+        public NumeralViewModel(Store store)
         {
+            CategoryName = "Числительнай";
+            SelectedAnswers = ["", "", "", "", "", "", "", ""];
             _store = store;
-            SelectedAnswers = ["","","", "", "", "", "", "", "", "", "", ""];
-            CategoryName = "Падежт";
-            GoBackCommand = new NavigateCommand<ThemeViewModel>(store, () => new ThemeViewModel(store));
+            GetExercisesAsync().ContinueWith(t => t, TaskScheduler.FromCurrentSynchronizationContext());
             NavigateFinishExerciseCommand = new RelayCommand(() =>
             {
                 AddAnswers();
@@ -162,8 +117,8 @@ namespace MokshenDesktop.ViewModel.ThemesViewModel
                 }
                 NavigateFinishExercise(_store);
             });
+            GoBackCommand = new NavigateCommand<ThemeViewModel>(store, () => new ThemeViewModel(store));
         }
-
         public void AddAnswers()
         {
             SelectedAnswers[0] = TextBoxContent1;
@@ -174,10 +129,6 @@ namespace MokshenDesktop.ViewModel.ThemesViewModel
             SelectedAnswers[5] = TextBoxContent6;
             SelectedAnswers[6] = TextBoxContent7;
             SelectedAnswers[7] = TextBoxContent8;
-            SelectedAnswers[8] = TextBoxContent9;
-            SelectedAnswers[9] = TextBoxContent10;
-            SelectedAnswers[10] = TextBoxContent11;
-            SelectedAnswers[11] = TextBoxContent12;
         }
     }
 }
