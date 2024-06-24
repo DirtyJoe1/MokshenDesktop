@@ -129,7 +129,7 @@ namespace MokshenDesktop.ViewModel
             }
             else if(response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
-                MessageBox.Show("Пользователь с таким сочетанием логина и пароля не найден");
+                new CustomMessageBox("Пользователь с таким сочетанием логина и пароля не найден").Show();
             }
         }
         

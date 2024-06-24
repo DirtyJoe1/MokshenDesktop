@@ -30,5 +30,7 @@
 
     <Style x:Key="NumeralTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
         <Setter Property="Height" Value="0.68in"/>
+        <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
 </ResourceDictionary>

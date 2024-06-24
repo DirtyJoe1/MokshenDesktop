@@ -15,11 +15,13 @@
             <ContentControl Style="{DynamicResource HelpTextBlock}"
                             Content="{DynamicResource RootExerciseHelpTextBlock}"/>
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <ItemsControl ItemsSource="{Binding Exercises}"
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <Border BorderBrush="{DynamicResource AccentColor}" BorderThickness="2" CornerRadius="20" Padding="25">
+                <ItemsControl ItemsSource="{Binding Exercises}"
                           ItemTemplate="{StaticResource RootExerciseItemsControlTemplate}">
-            </ItemsControl>
-            <StackPanel>
+                </ItemsControl>
+            </Border>
+            <StackPanel HorizontalAlignment="Center">
             <Button Content="{DynamicResource FinishExerciseLabelText}"
                     Style="{DynamicResource BaseButtonStyle}"
                     Command="{Binding NavigateFinishExerciseCommand}"
